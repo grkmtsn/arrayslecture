@@ -1,266 +1,283 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Diziler</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/flexboxgrid.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12 col-md-3 col-lg-3"></div>
-        <div class="col-xs-12 col-md-6 col-lg-6">
-          <div class="wrapper">
-            <div id="dizilerNedir" class="section">
-              <div class="title">
-                <h3>1. Diziler Nedir?</h3>
-              </div>
-              <div class="desc">
-                <p>
-                  &nbsp;&nbsp;&nbsp;&nbsp; Değişkenler, üzerinde tek bir değer
-                  tutabildiğimiz yapılardır. Diziler ise bellek üzerinde aynı
-                  türde veriler tutabildiğimiz veri yapılarına denilmektedir.
-                </p>
-              </div>
-              <div>
-                <img src="assets/images/arrayTable.svg" alt="" />
-              </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Diziler</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/flexboxgrid.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-3 col-lg-3"></div>
+      <div class="col-xs-12 col-md-6 col-lg-6">
+        <div class="wrapper">
+          <div id="dizilerNedir" class="section">
+            <div class="title">
+              <h3>1. Diziler Nedir?</h3>
             </div>
-            <div id="dizilereNedenIhtiyacDuyariz" class="section">
-              <div class="title">
-                <h3>2. Dizilere Neden İhtiyaç Duyarız?</h3>
-              </div>
-              <div class="desc">
-                <p>
-                  &nbsp;&nbsp;&nbsp;&nbsp; 10 öğrencinin not ortalamasını
-                  hesaplamanızı istersem ne yaparsınız?
-                </p>
-                <iframe
-                  src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C1)&t=material&wt=none&l=text%2Fx-csharp&ds=true&dsyoff=14px&dsblur=22px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fm=Fira%20Code&fs=13px&lh=133%25&si=false&es=1x&wm=false&code=Double%2520ogrenci1%2520%253D%252030%253B%250ADouble%2520ogrenci2%2520%253D%252090%253B%250A.%250A.%250A.%250ADouble%2520ogrenci10%2520%253D%252050%253B%250ADouble%2520ortalama%2520%253D%2520(ogrenci1%2520%252B%2520ogrenci2%2520%252B%2520.%2520.%2520.%2520%252B%2520ogrenci10)%2520%252F%252010%253B"
-                  style="width:100%; height:283px; border:0; overflow:hidden;"
-                  sandbox="allow-scripts allow-same-origin"
-                >
-                </iframe>
-                <p>
-                  &nbsp;&nbsp;&nbsp;&nbsp;Bu sonuç bizim istediğimiz cevabı
-                  karşılayacaktır. Ancak bahsettiğim sınıf bir amfi olabilir ve
-                  bu amfi içerinde 150 kişi var. Bu durumda 150 adet öğrenci
-                  için teker teker değişken mi tanımyacaktınız ve ardından bu
-                  değişkenlerin hepsini işleme tabi tutmak ne kadar işlevsel
-                  olabilir.
-                </p>
-                <p>
-                  &nbsp;&nbsp;&nbsp;&nbsp;Bu gibi durumlar için dizileri
-                  kullanmak zamansal olarak bize büyük bir tasarruf sağlayacak
-                  olup, kod kalitesi ve okunabilirliği açısından tercih edilmesi
-                  gereken yöntemdir.
-                </p>
-              </div>
+            <div class="desc">
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp; Değişkenler, üzerinde tek bir değer
+                tutabildiğimiz yapılardır. Diziler ise bellek üzerinde aynı
+                türde veriler tutabildiğimiz veri yapılarına denilmektedir.
+              </p>
             </div>
-            <div id="dizilerNasilTanimlanir" class="section">
-              <div class="title">
-                <h3>3. Diziler nasıl tanımlanır?</h3>
-              </div>
-              <div class="desc">
-                <p>
-                  &nbsp;&nbsp;&nbsp;&nbsp; Dizi tanımlamanın 3 çeşit yolu
-                  vardır.
-                </p>
-                <iframe
-                  src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C0)&t=material&wt=none&l=text%2Fx-csharp&ds=true&dsyoff=12px&dsblur=14px&wc=true&wa=true&pv=38px&ph=43px&ln=false&fm=Fira%20Code&fs=13px&lh=133%25&si=false&es=1x&wm=false&code=%252F%252F%25201.%2520Y%25C3%25B6ntem%250D%250Aint%255B%255D%2520ornekDizi%2520%253D%2520new%2520int%255B5%255D%253B%250D%250A%250D%250A%252F%252F%25202.%2520Y%25C3%25B6ntem%250D%250Aint%255B%255D%2520ornekDizi%253B%250D%250AornekDizi%2520%253D%2520new%2520int%255B5%255D%253B%250D%250A%250D%250A%252F%252F%25203.%2520Y%25C3%25B6ntem%250D%250Aint%255B%255D%2520ornekDizi%2520%253D%2520%257B58%252C%252024%252C%252012%252C%2520-23%252C%252044%257D%253B"
-                  style="width:100%; height:297px; border:0; overflow:hidden;"
-                  sandbox="allow-scripts allow-same-origin"
-                >
-                </iframe>
-                <ul class="list">
-                  <li>
-                    <p>
-                      Birinci yöntemde, "ornekDizi" adında 5 elemanlı boş bir
-                      dizi tanımlanmıştır.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      İkinci yöntemimiz ise bildirme ve tanımlamayı ayrı
-                      satırlarda oluşturmak istersek kullanacağımız yöntemdir.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      Üçüncü yöntem ise dizinin uzunluğunu ve elemanlarını
-                      bildiğimiz durumları elemanlarını da tanımlayarak
-                      kullanabildiğimiz yöntemdir.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div id="dizilerdeVerilereNasilErisimSaglarim" class="section">
-              <div class="title">
-                <h3>4. Dizilerde Verilere Nasıl Erişim Sağlarım?</h3>
-              </div>
-              <div class="desc">
-                <p>
-                  &nbsp;&nbsp;&nbsp;&nbsp;İlk olarak dizilerdeki elemanlara her
-                  zaman indis numarası ile erişim sağlarım. Her dizi ilk indis
-                  numarası 0’dır.
-                </p>
-                <div>
-                  <img src="assets/images/arrayTable2.svg" alt="" />
-                </div>
-                <p>
-                  &nbsp;&nbsp;&nbsp;&nbsp;Örneğin; daha önce tanımlamış olduğum
-                  ornekDizi isimli dizinin 3. indisine nasıl erişim sağlarım?
-                </p>
-                <iframe
-                  src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C0)&t=material&wt=none&l=text%2Fx-csharp&ds=true&dsyoff=12px&dsblur=14px&wc=true&wa=true&pv=38px&ph=43px&ln=false&fm=Fira%20Code&fs=13px&lh=133%25&si=false&es=1x&wm=false&code=int%255B%255D%2520ornekDizi%2520%253D%2520%257B43%252C%252023%252C%252022%252C%2520-12%257D%253B%250D%250Aint%2520deger%2520%253D%2520ornekDizi%255B3%255D%253B%250D%250AConsole.Write(deger)%253B%2520%252F%252F%2520-12"
-                  style="width:100%; height:195px; border:0; overflow:hidden;"
-                  sandbox="allow-scripts allow-same-origin"
-                >
-                </iframe>
-                <div>
-                  <p>
-                    <strong>Örnek 1: </strong>10 kişilik bir sınıfın not
-                    ortalamasını hesaplayan programı yazalım.
-                  </p>
-                  <iframe
-                    src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C0)&t=material&wt=none&l=text%2Fx-csharp&ds=true&dsyoff=12px&dsblur=14px&wc=true&wa=true&pv=38px&ph=43px&ln=false&fm=Fira%20Code&fs=13px&lh=133%25&si=false&es=1x&wm=false&code=ogrenci%255B0%255D%2520%253D%2520100%253B%250D%250Aogrenci%255B1%255D%2520%253D%252080%253B%250D%250Aogrenci%255B2%255D%2520%253D%252098%253B%250D%250Aogrenci%255B3%255D%2520%253D%252022%253B%250D%250Aogrenci%255B4%255D%2520%253D%252055%253B%250D%250Aogrenci%255B5%255D%2520%253D%252043%253B%250D%250Aogrenci%255B6%255D%2520%253D%252075%253B%250D%250Aogrenci%255B7%255D%2520%253D%252078%253B%250D%250Aogrenci%255B8%255D%2520%253D%252056%253B%250D%250Aogrenci%255B9%255D%2520%253D%252012%253B%250D%250A%250D%250Adouble%2520toplam%2520%253D%25200%252C%2520ortalama%2520%253D%25200%253B%250D%250A%250D%250Afor(int%2520i%253B%2520i%2520%253C%2520ogrenci.length%253B%2520i%252B%252B)%250D%250A%257B%250D%250A%2520%2520toplam%2520%252B%253D%2520ogrenci%255Bi%255D%253B%250D%250A%257D%250D%250A%250D%250Aortalama%2520%253D%2520toplam%2520%252F%2520ogrenci.length%253B%2520%252F%252F%2520length%2520%25C3%25B6zelli%25C4%259Fi%2520bize%2520dizinin%2520toplam%2520eleman%2520say%25C4%25B1s%25C4%25B1n%25C4%25B1%2520verir.%250D%250A%250D%250AConsole.Write(ortalama)%253B%2520%252F%252F%252061.9"
-                    style="width:100%; height:518px; border:0; overflow:hidden;"
-                    sandbox="allow-scripts allow-same-origin"
-                  >
-                  </iframe>
-                  <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;Dizimizin elemanlarına öğrenci
-                    notlarını sırasıyla atamış bulunmaktayız. Ardından dizinin
-                    her bir indisi değerini toplama işlemine tabi tutarak
-                    “toplam” değişkenine atamış olduk. Son olarak toplam
-                    değişkenini dizinin boyutuna bölerek aritmetiksel bir
-                    ortalama yapan bir program yazmış olduk.
-                  </p>
-                </div>
-              </div>
+            <div>
+              <img src="assets/images/arrayTable.svg" alt="" />
             </div>
           </div>
-        </div>
-        <div class="col-xs-12 col-md-3 col-lg-3">
-          <div class="menu-wrapper">
-            <div class="menu">
-              <ul>
-                <li class="active">
-                  <div class="circle"></div>
-                  <div class="up"></div>
-                  <a class="scroll" href="#dizilerNedir">Diziler Nedir?</a>
-                  <div class="down"></div>
+          <div id="dizilereNedenIhtiyacDuyariz" class="section">
+            <div class="title">
+              <h3>2. Dizilere Neden İhtiyaç Duyarız?</h3>
+            </div>
+            <div class="desc">
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp; 10 öğrencinin not ortalamasını
+                hesaplamanızı istersem ne yaparsınız?
+              </p>
+              <iframe
+                src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C1)&t=material&wt=none&l=text%2Fx-csharp&ds=true&dsyoff=14px&dsblur=22px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fm=Fira%20Code&fs=13px&lh=133%25&si=false&es=1x&wm=false&code=Double%2520ogrenci1%2520%253D%252030%253B%250ADouble%2520ogrenci2%2520%253D%252090%253B%250A.%250A.%250A.%250ADouble%2520ogrenci10%2520%253D%252050%253B%250ADouble%2520ortalama%2520%253D%2520(ogrenci1%2520%252B%2520ogrenci2%2520%252B%2520.%2520.%2520.%2520%252B%2520ogrenci10)%2520%252F%252010%253B"
+                style="width:100%; height:300px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin">
+              </iframe>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;Bu sonuç bizim istediğimiz cevabı
+                karşılayacaktır. Ancak bahsettiğim sınıf bir amfi olabilir ve
+                bu amfi içerinde 150 kişi var. Bu durumda 150 adet öğrenci
+                için teker teker değişken mi tanımyacaktınız ve ardından bu
+                değişkenlerin hepsini işleme tabi tutmak ne kadar işlevsel
+                olabilir.
+              </p>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;Bu gibi durumlar için dizileri
+                kullanmak zamansal olarak bize büyük bir tasarruf sağlayacak
+                olup, kod kalitesi ve okunabilirliği açısından tercih edilmesi
+                gereken yöntemdir.
+              </p>
+            </div>
+          </div>
+          <div id="dizilerNasilTanimlanir" class="section">
+            <div class="title">
+              <h3>3. Diziler nasıl tanımlanır?</h3>
+            </div>
+            <div class="desc">
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp; Dizi tanımlamanın 3 çeşit yolu
+                vardır.
+              </p>
+              <iframe
+                src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C0)&t=material&wt=none&l=text%2Fx-csharp&ds=true&dsyoff=12px&dsblur=14px&wc=true&wa=true&pv=38px&ph=43px&ln=false&fm=Fira%20Code&fs=13px&lh=133%25&si=false&es=1x&wm=false&code=%252F%252F%25201.%2520Y%25C3%25B6ntem%250D%250Aint%255B%255D%2520ornekDizi%2520%253D%2520new%2520int%255B5%255D%253B%250D%250A%250D%250A%252F%252F%25202.%2520Y%25C3%25B6ntem%250D%250Aint%255B%255D%2520ornekDizi%253B%250D%250AornekDizi%2520%253D%2520new%2520int%255B5%255D%253B%250D%250A%250D%250A%252F%252F%25203.%2520Y%25C3%25B6ntem%250D%250Aint%255B%255D%2520ornekDizi%2520%253D%2520%257B58%252C%252024%252C%252012%252C%2520-23%252C%252044%257D%253B"
+                style="width:100%; height:297px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin">
+              </iframe>
+              <ul class="list">
+                <li>
+                  <p>
+                    Birinci yöntemde, "ornekDizi" adında 5 elemanlı boş bir
+                    dizi tanımlanmıştır.
+                  </p>
                 </li>
                 <li>
-                  <div class="circle"></div>
-                  <div class="up"></div>
-                  <a class="scroll" href="#dizilereNedenIhtiyacDuyariz"
-                    >Dizilere Neden İhtiyaç Duyarız?</a
-                  >
-                  <div class="down"></div>
+                  <p>
+                    İkinci yöntemimiz ise bildirme ve tanımlamayı ayrı
+                    satırlarda oluşturmak istersek kullanacağımız yöntemdir.
+                  </p>
                 </li>
                 <li>
-                  <div class="circle"></div>
-                  <div class="up"></div>
-                  <a class="scroll" href="#dizilerNasilTanimlanir"
-                    >Diziler Nasıl Tanımlanır?</a
-                  >
-                  <div class="down"></div>
-                </li>
-                <li>
-                  <div class="circle"></div>
-                  <div class="up"></div>
-                  <a class="scroll" href="#dizilerdeVerilereNasilErisimSaglarim"
-                    >Dizilerde Verilere Nasıl Erişim Sağlarım?</a
-                  >
-                  <div class="down"></div>
-                </li>
-                <li>
-                  <div class="circle"></div>
-                  <div class="up"></div>
-                  <a class="scroll" href="#arraySinifi">Array Sınıfı</a>
-                  <div class="down"></div>
+                  <p>
+                    Üçüncü yöntem ise dizinin uzunluğunu ve elemanlarını
+                    bildiğimiz durumları elemanlarını da tanımlayarak
+                    kullanabildiğimiz yöntemdir.
+                  </p>
                 </li>
               </ul>
             </div>
           </div>
+          <div id="dizilerdeVerilereNasilErisimSaglarim" class="section">
+            <div class="title">
+              <h3>4. Dizilerde Verilere Nasıl Erişim Sağlarım?</h3>
+            </div>
+            <div class="desc">
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;İlk olarak dizilerdeki elemanlara her
+                zaman indis numarası ile erişim sağlarım. Her dizi ilk indis
+                numarası 0’dır.
+              </p>
+              <div>
+                <img src="assets/images/arrayTable2.svg" alt="" />
+              </div>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;Örneğin; daha önce tanımlamış olduğum
+                ornekDizi isimli dizinin 3. indisine nasıl erişim sağlarım?
+              </p>
+              <iframe
+                src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C0)&t=material&wt=none&l=text%2Fx-csharp&ds=true&dsyoff=12px&dsblur=14px&wc=true&wa=true&pv=38px&ph=43px&ln=false&fm=Fira%20Code&fs=13px&lh=133%25&si=false&es=1x&wm=false&code=int%255B%255D%2520ornekDizi%2520%253D%2520%257B43%252C%252023%252C%252022%252C%2520-12%257D%253B%250D%250Aint%2520deger%2520%253D%2520ornekDizi%255B3%255D%253B%250D%250AConsole.Write(deger)%253B%2520%252F%252F%2520-12"
+                style="width:100%; height:195px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin">
+              </iframe>
+              <div>
+                <p>
+                  <strong>Örnek 1: </strong>10 kişilik bir sınıfın not
+                  ortalamasını hesaplayan programı yazalım.
+                </p>
+                <iframe
+                  src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C0)&t=material&wt=none&l=text%2Fx-csharp&ds=true&dsyoff=12px&dsblur=14px&wc=true&wa=true&pv=38px&ph=43px&ln=false&fm=Fira%20Code&fs=13px&lh=133%25&si=false&es=1x&wm=false&code=ogrenci%255B0%255D%2520%253D%2520100%253B%250D%250Aogrenci%255B1%255D%2520%253D%252080%253B%250D%250Aogrenci%255B2%255D%2520%253D%252098%253B%250D%250Aogrenci%255B3%255D%2520%253D%252022%253B%250D%250Aogrenci%255B4%255D%2520%253D%252055%253B%250D%250Aogrenci%255B5%255D%2520%253D%252043%253B%250D%250Aogrenci%255B6%255D%2520%253D%252075%253B%250D%250Aogrenci%255B7%255D%2520%253D%252078%253B%250D%250Aogrenci%255B8%255D%2520%253D%252056%253B%250D%250Aogrenci%255B9%255D%2520%253D%252012%253B%250D%250A%250D%250Adouble%2520toplam%2520%253D%25200%252C%2520ortalama%2520%253D%25200%253B%250D%250A%250D%250Afor(int%2520i%253B%2520i%2520%253C%2520ogrenci.length%253B%2520i%252B%252B)%250D%250A%257B%250D%250A%2520%2520toplam%2520%252B%253D%2520ogrenci%255Bi%255D%253B%250D%250A%257D%250D%250A%250D%250Aortalama%2520%253D%2520toplam%2520%252F%2520ogrenci.length%253B%2520%252F%252F%2520length%2520%25C3%25B6zelli%25C4%259Fi%2520bize%2520dizinin%2520toplam%2520eleman%2520say%25C4%25B1s%25C4%25B1n%25C4%25B1%2520verir.%250D%250A%250D%250AConsole.Write(ortalama)%253B%2520%252F%252F%252061.9"
+                  style="width:100%; height:518px; border:0; overflow:hidden;"
+                  sandbox="allow-scripts allow-same-origin">
+                </iframe>
+                <p>
+                  &nbsp;&nbsp;&nbsp;&nbsp;Dizimizin elemanlarına öğrenci
+                  notlarını sırasıyla atamış bulunmaktayız. Ardından dizinin
+                  her bir indisi değerini toplama işlemine tabi tutarak
+                  “toplam” değişkenine atamış olduk. Son olarak toplam
+                  değişkenini dizinin boyutuna bölerek aritmetiksel bir
+                  ortalama yapan bir program yazmış olduk.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="arraySinifi" class="section">
+            <div class="title">
+              <h3>5. Array Sınıfı</h3>
+            </div>
+            <div class="desc">
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;Diziler Array sınıfından türemektedir. Dizinin boyutunu değiştirmek, tersine
+                çevirmek ve sıralamak gibi
+                işlemler için Array sınıfının hazır metotlarını kullanabilmekteyiz.</p>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;Diziler için kullanılan bazı önemli methodlar aşağıdakiler gibidir;
+              </p>
+              <p><strong>1. Array.Clear():</strong> Dizinin elemanlarını sıfırlamak istersek kullanacağımız metottur.
+                Aldığı parametreler sırasıyla; dizinin kendisi(Array), başlangıç indexi(int) ve bitiş indexi(int)'dir.
+              </p>
+              <iframe
+                src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C0)&t=material&wt=none&l=text%2Fx-csharp&ds=true&dsyoff=8px&dsblur=9px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fm=Hack&fs=13px&lh=133%25&si=false&es=2x&wm=false&code=string%255B%255D%2520sehirler%2520%253D%2520%257B'%25C4%25B0stanbul'%252C%2520'Ankara'%252C%2520'Adana'%252C%2520'Diyarbak%25C4%25B1r'%252C%2520'%25C4%25B0zmir'%257D%253B%250A%250A%252F%252F%2520Array.Clear(dizi%252C%2520baslang%25C4%25B1cIndexi%252C%2520bitisIndexi)%250AArray.Clear(sehirler%252C%25202%252C%25203)%253B%250AConsole.Write(sehirler)%2520%252F%252F%2520%257B'%25C4%25B0stanbul'%252C%2520'Ankara'%252C%2520null%252C%2520null%252C%2520'%25C4%25B0zmir'%257D%253B"
+                style="width:100%; height:283px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin">
+              </iframe>
+              <p><strong>2. Array.Copy():</strong> Dizinin elemanlarını, başka bir diziye kopyalamak istersek
+                kullanacağımız metottur. Aldığı parametreler sırasıyla; kopyalanacak kaynak dizi(Array), kopyalanacağı
+                hedef dizi(Array), kopyalanacak index sayısı(int)'dır.
+              </p>
+              <iframe
+                src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C0)&t=material&wt=none&l=text%2Fx-csharp&ds=true&dsyoff=8px&dsblur=9px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fm=Hack&fs=13px&lh=133%25&si=false&es=2x&wm=false&code=string%255B%255D%2520sehirler%2520%253D%2520%257B'%25C4%25B0stanbul'%252C%2520'Ankara'%252C%2520'Adana'%252C%2520'Diyarbak%25C4%25B1r'%252C%2520'%25C4%25B0zmir'%257D%253B%250Astring%255B%255D%2520digerSehirler%2520%253D%2520string%255B4%255D%253B%250A%250A%252F%252F%2520Array.Copy(Array%2520kaynakDizi%252C%2520Array%2520hedefDizi%252C%2520int%2520index)%250AArray.Copy(sehirler%252C%2520digerSehirler%252C%25203)%253B%250AConsole.Write(digerSehirler)%2520%252F%252F%2520%257B'%25C4%25B0stanbul'%252C%2520'Ankara'%252C%2520'Adana'%252C%2520null%257D%253B"
+                style="width:100%; height:300px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-3 col-lg-3">
+        <div class="menu-wrapper">
+          <div class="menu">
+            <ul>
+              <li class="active">
+                <div class="circle"></div>
+                <div class="up"></div>
+                <a class="scroll" href="#dizilerNedir">Diziler Nedir?</a>
+                <div class="down"></div>
+              </li>
+              <li>
+                <div class="circle"></div>
+                <div class="up"></div>
+                <a class="scroll" href="#dizilereNedenIhtiyacDuyariz">Dizilere Neden İhtiyaç Duyarız?</a>
+                <div class="down"></div>
+              </li>
+              <li>
+                <div class="circle"></div>
+                <div class="up"></div>
+                <a class="scroll" href="#dizilerNasilTanimlanir">Diziler Nasıl Tanımlanır?</a>
+                <div class="down"></div>
+              </li>
+              <li>
+                <div class="circle"></div>
+                <div class="up"></div>
+                <a class="scroll" href="#dizilerdeVerilereNasilErisimSaglarim">Dizilerde Verilere Nasıl Erişim
+                  Sağlarım?</a>
+                <div class="down"></div>
+              </li>
+              <li>
+                <div class="circle"></div>
+                <div class="up"></div>
+                <a class="scroll" href="#arraySinifi">Array Sınıfı</a>
+                <div class="down"></div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </body>
-  <script>
-    var items = document.querySelectorAll("li");
-    items.forEach(function(item) {
-      item.addEventListener("click", function() {
-        clearActive();
-        this.classList.add("active");
-      });
+  </div>
+</body>
+<script>
+  var items = document.querySelectorAll("li");
+  items.forEach(function (item) {
+    item.addEventListener("click", function () {
+      clearActive();
+      this.classList.add("active");
     });
+  });
 
-    var clearActive = function() {
-      items.forEach(function(item) {
-        item.classList.remove("active");
-      });
+  var clearActive = function () {
+    items.forEach(function (item) {
+      item.classList.remove("active");
+    });
+  };
+
+  (function () {
+    scrollTo();
+  })();
+
+  function scrollTo() {
+    const links = document.querySelectorAll(".scroll");
+    links.forEach(each => (each.onclick = scrollAnchors));
+  }
+
+  function scrollAnchors(e, respond = null) {
+    const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
+    e.preventDefault();
+    var targetID = respond
+      ? respond.getAttribute("href")
+      : this.getAttribute("href");
+    const targetAnchor = document.querySelector(targetID);
+    if (!targetAnchor) return;
+    const originalTop = distanceToTop(targetAnchor);
+    window.scrollBy({ top: originalTop - 20, left: 0, behavior: "smooth" });
+    const checkIfDone = setInterval(function () {
+      const atBottom =
+        window.innerHeight + window.pageYOffset >=
+        document.body.offsetHeight - 2;
+      if (distanceToTop(targetAnchor) === 0 || atBottom) {
+        targetAnchor.tabIndex = "-1";
+        targetAnchor.focus();
+        window.history.pushState("", "", targetID);
+        clearInterval(checkIfDone);
+      }
+    }, 100);
+  }
+
+  (function () {
+    var sections = {};
+    document.querySelectorAll(".section").forEach(function (item) {
+      sections[item.id] = item.offsetTop - 25;
+    });
+    window.onscroll = () => {
+      var scrollPosition =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      for (i in sections) {
+        if (sections[i] <= scrollPosition) {
+          document.querySelector(".active").setAttribute("class", " ");
+          document
+            .querySelector("a[href*=" + i + "]")
+            .parentElement.setAttribute("class", "active");
+        }
+      }
     };
+  })();
+</script>
 
-    (function() {
-      scrollTo();
-    })();
-
-    function scrollTo() {
-      const links = document.querySelectorAll(".scroll");
-      links.forEach(each => (each.onclick = scrollAnchors));
-    }
-
-    function scrollAnchors(e, respond = null) {
-      const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
-      e.preventDefault();
-      var targetID = respond
-        ? respond.getAttribute("href")
-        : this.getAttribute("href");
-      const targetAnchor = document.querySelector(targetID);
-      if (!targetAnchor) return;
-      const originalTop = distanceToTop(targetAnchor);
-      window.scrollBy({ top: originalTop - 20, left: 0, behavior: "smooth" });
-      const checkIfDone = setInterval(function() {
-        const atBottom =
-          window.innerHeight + window.pageYOffset >=
-          document.body.offsetHeight - 2;
-        if (distanceToTop(targetAnchor) === 0 || atBottom) {
-          targetAnchor.tabIndex = "-1";
-          targetAnchor.focus();
-          window.history.pushState("", "", targetID);
-          clearInterval(checkIfDone);
-        }
-      }, 100);
-    }
-
-    (function() {
-      var sections = {};
-      document.querySelectorAll(".section").forEach(function(item) {
-        sections[item.id] = item.offsetTop - 25;
-      });
-      window.onscroll = () => {
-        var scrollPosition =
-          document.documentElement.scrollTop || document.body.scrollTop;
-        for (i in sections) {
-          if (sections[i] <= scrollPosition) {
-            document.querySelector(".active").setAttribute("class", " ");
-            document
-              .querySelector("a[href*=" + i + "]")
-              .parentElement.setAttribute("class", "active");
-          }
-        }
-      };
-    })();
-  </script>
 </html>
