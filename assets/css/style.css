@@ -5,7 +5,7 @@
 body {
   font-family: 'PT Sans', sans-serif;
   color: #2d2d2d;
-  background-image: url('/assets/images/bg1.jpg');
+  background-image: url('assets/images/bg1.jpg');
   background-attachment: fixed;
 }
 strong {
